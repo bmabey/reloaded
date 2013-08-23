@@ -4,13 +4,16 @@
   (:require
    [clojure.java.io :as io]
    [clojure.java.javadoc :refer (javadoc)]
-   [clojure.pprint :refer (pprint)]
+   [clojure.pprint :refer (pprint print-table)]
    [clojure.reflect :refer (reflect)]
    [clojure.repl :refer (apropos dir doc find-doc pst source)]
    [clojure.set :as set]
    [clojure.string :as str]
-   [clojure.test :as test]
    [clojure.tools.namespace.repl :refer (refresh refresh-all)]
+   spyscope.core ;; so the readers can be used...
+   [midje.repl :as test]
+   [cemerick.pomegranate :refer (add-dependencies)]
+   [criterium.core :refer [bench quick-bench]]
    [{{main-ns}}]))
 
 (def system
@@ -50,3 +53,13 @@
   []
   (stop)
   (refresh :after 'user/go))
+
+
+;; helper fns
+
+(defn add-deps
+  "Adds deps to your running REPL without restarting for fast experimentation."
+  [deps]
+  (add-dependencies :coordinates deps
+                    :repositories (merge cemerick.pomegranate.aether/maven-central
+                                         {"clojars" "http://clojars.org/repo"})))
