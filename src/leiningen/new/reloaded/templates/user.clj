@@ -52,8 +52,8 @@
   "Stops the system, reloads modified source files, and restarts it."
   []
   (stop)
-  (refresh :after 'user/go))
-
+  (midje.config/with-augmented-config {:check-after-creation false}
+      (refresh :after 'user/go)))
 
 ;; helper fns
 
