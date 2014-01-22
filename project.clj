@@ -1,4 +1,4 @@
-(defproject bmabey-reloaded/lein-template "0.1.1-SNAPSHOT"
+(defproject bmabey-reloaded/lein-template "0.1.2"
   :description "A Leiningen 2 template to generate project skeletons using
   tools.namespace and a :dev profile with a user.clj file."
   :url "https://github.com/bmabey/reloaded"

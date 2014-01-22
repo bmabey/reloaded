@@ -8,9 +8,9 @@
                              ;;[lein-nodisassemble "0.1.1"]
                              ]
                    :dependencies [[org.clojure/tools.namespace "0.2.4"]
-                                  [midje "1.6-beta1"]
-                                  [criterium "0.4.1"]
-                                  [com.cemerick/pomegranate "0.2.0"]
-                                  [spyscope "0.1.3"]]
+                                  [midje "1.6.0"]
+                                  [criterium "0.4.3"]
+                                  [spyscope "0.1.4"]
+                                  [com.cemerick/pomegranate "0.2.0"]]
                    :source-paths ["dev"]}}
   :aliases {"dumbrepl" ["trampoline" "run" "-m" "clojure.main/main"]})
