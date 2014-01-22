@@ -35,4 +35,5 @@ project. Names without a groupId are also accepted."
                ["project.clj" (render "project.clj" data)]
                ["src/{{path}}.clj" (render "core.clj" data)]
                ["test/{{path}}_test.clj" (render "core_test.clj" data)]
+               ["dev/dev.clj" (render "dev.clj" data)]
                ["dev/user.clj" (render "user.clj" data)]))))
