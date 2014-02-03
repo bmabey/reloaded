@@ -1,5 +1,6 @@
 (ns user
-  "Bootstrap fn for dev env.")
+  "Bootstrap fn for dev env."
+  (:require clojure.stacktrace))
 
 (defn dev
   []
