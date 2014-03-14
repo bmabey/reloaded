@@ -1,4 +1,4 @@
-(ns user
+(ns dev
   "Tools for interactive development with the REPL. This file should
   not be included in a production build of the application."
   (:require
@@ -10,10 +10,12 @@
    [clojure.set :as set]
    [clojure.string :as str]
    [clojure.tools.namespace.repl :refer (refresh refresh-all)]
-   spyscope.core ;; so the readers can be used...
-   [midje.repl :as test]
+
    [cemerick.pomegranate :refer (add-dependencies)]
    [criterium.core :refer [bench quick-bench]]
+   [midje.repl :as test]
+   spyscope.core ;; so the readers can be used...
+
    [{{main-ns}}]))
 
 (def system
