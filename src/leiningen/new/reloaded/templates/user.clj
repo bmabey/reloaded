@@ -3,7 +3,6 @@
   blow up on start when it hits compilation errors of required files."
   (:require clojure.stacktrace))
 
-(println "Run (dev) to go into the dev nameapce.")
 
 (defn dev
   "Run (dev) to go into the dev nameapce. Use (dev :reload) to reload dev ns first."
